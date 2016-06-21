@@ -41,5 +41,12 @@
   "devDependencies": {
     "ava": "*",
     "xo": "*"
+  },
+  "dependencies": {
+    "execa": "*",
+    "mem": "*"
+  },
+  "xo": {
+    "space": true
   }
 }
