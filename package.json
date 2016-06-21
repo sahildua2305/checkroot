@@ -1,0 +1,45 @@
+{
+  "name": "checkroot",
+  "version": "0.0.0",
+  "description": "Find if the current user is root or not",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sahildua2305/checkroot"
+  },
+  "author": {
+    "name": "Sahil Dua",
+    "email": "sahildua2305@gmail.com",
+    "url": "http://sahildua.com"
+  },
+  "engine": {
+    "node": ">=4"
+  },
+  "scripts": {
+    "test": "xo && ava"
+  },
+  "files": [
+    "index.js"
+  ],
+  "keywords": [
+    "root",
+    "sudo",
+    "username",
+    "root",
+    "user",
+    "name",
+    "login",
+    "logname",
+    "lname",
+    "whoami",
+    "id",
+    "env",
+    "environment",
+    "var",
+    "variable"
+  ],
+  "devDependencies": {
+    "ava": "*",
+    "xo": "*"
+  }
+}
