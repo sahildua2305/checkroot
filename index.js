@@ -2,7 +2,7 @@
 * @Author: sahildua2305
 * @Date:   2016-06-21 19:14:10
 * @Last Modified by:   Sahil Dua
-* @Last Modified time: 2016-06-21 20:45:29
+* @Last Modified time: 2016-06-21 20:50:53
 */
 
 'use strict';
@@ -24,16 +24,22 @@ module.exports = mem(() => {
   const envVar = getEnvVar();
 
   if (envVar) {
-    // console.log(envVar);
-    // console.log(envVar === 'root');
-    return envVar === 'root';
+    return (envVar === 'root');
   }
+
+  var username;
 
   try {
     if (process.platform === 'darwin' || process.platform === 'linux') {
-      var username = cleanOutput(exec('id', ['-un'], {encoding: 'utf8'}));
-      console.log(username);
-      return username;
+      username = cleanOutput(exec('id', ['-un'], {
+        encoding: 'utf8'
+      }));
+      return (username === 'root');
+    } else if (process.platform === 'win32') {
+      username = cleanOutput(exec('whoami', {
+        encoding: 'utf8'
+      }));
+      return (username === 'root');
     }
   } catch (err) {}
 });
