@@ -1,5 +1,32 @@
 # sudo-or-not
-A Nodejs module to check whether the current user is sudo or not
 
+> Check if the current user is root or not
 
-Use environment variables and then fallback to `$(whoami)` and `id -un` if no environment variables are set
+## Install
+
+```
+$ npm install --save checkroot
+```
+
+## Usage
+
+```js
+const checkroot = require('checkroot');
+
+// returns
+//   true, if the current user is root
+//   false, otherwise
+checkroot();
+```
+
+## API
+
+First it tries to get the username from the `USER` and `LOGNAME` environment variables. In the rare case when none of these environment variables are set, it falls back to `$ id -un` on Linux / MacOS and `$ whoami` on Windows. The result is cached using [`mem`](https://www.npmjs.com/package/mem).
+
+### checkroot()
+
+Returns `true`, if the current user is root and `false`, otherwise.
+
+## License
+
+MIT © [Sahil Dua](http://sahildua.com)
