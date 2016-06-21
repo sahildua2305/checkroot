@@ -1,4 +1,4 @@
-# sudo-or-not
+# checkroot
 
 > Check if the current user is root or not
 
@@ -16,7 +16,7 @@ const checkroot = require('checkroot');
 // returns
 //   true, if the current user is root
 //   false, otherwise
-checkroot();
+console.log(checkroot());
 ```
 
 ## API
