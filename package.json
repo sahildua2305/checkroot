@@ -16,7 +16,7 @@
     "node": ">=4"
   },
   "scripts": {
-    "test": "xo && ava"
+    "test": "xo && ava test/*"
   },
   "files": [
     "index.js"
@@ -43,7 +43,6 @@
     "xo": "*"
   },
   "dependencies": {
-    "execa": "*",
     "mem": "*"
   },
   "xo": {
